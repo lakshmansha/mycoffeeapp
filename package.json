@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port=4201",
+    "start:prod": "ng serve --prod --port=4202",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,14 +12,17 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.1.4",
+    "@angular/animations": "^9.1.4",
+    "@angular/cdk": "^9.2.2",
     "@angular/common": "~9.1.4",
     "@angular/compiler": "~9.1.4",
     "@angular/core": "~9.1.4",
     "@angular/forms": "~9.1.4",
+    "@angular/material": "^9.2.2",
     "@angular/platform-browser": "~9.1.4",
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
+    "hammerjs": "^2.0.8",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
