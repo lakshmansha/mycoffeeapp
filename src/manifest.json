@@ -3,25 +3,25 @@
     "start_url": "/",
     "orientation": "portrait",
     "scope": "/",
-    "display": "standlone",
+    "display": "standalone",
     "short_name": "MyCoffeeApp",
     "theme_color": "#472D21",
     "background_color": "#C0B764",
     "icons": [
         {
-            "src": "icon_96.png",
+            "src": "assets/icons/icon-96x96.png",
             "sizes": "96x96"
         },
         {
-            "src": "icon_144.png",
+            "src": "assets/icons/icon-144x144.png",
             "sizes": "144x144"
         },
         {
-            "src": "icon_192.png",
+            "src": "assets/icons/icon-192x192.png",
             "sizes": "192x192"
         },
         {
-            "src": "icon_512.png",
+            "src": "assets/icons/icon-512x512.png",
             "sizes": "512x512"
         }
     ]

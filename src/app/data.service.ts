@@ -9,7 +9,7 @@ import { Coffee } from './logic/Coffee';
 })
 export class DataService {
 
-  public endpoint = "http://localhost:4202";
+  public endpoint = 'http://192.168.29.217:4202';
 
   constructor(private http: HttpClient) { }
 

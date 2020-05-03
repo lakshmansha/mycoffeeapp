@@ -39,23 +39,28 @@ export class ListComponent implements OnInit {
   share(coffee: Coffee) {
     const shareText = `I had this coffee at ${coffee.place} and for me it's a ${coffee.rating} star coffee`;
     const options = this.geolocation.detectBrowser();
-    if('share' in navigator) {
+    if ('share' in navigator) {
       (navigator as any).share({
         title: coffee.name,
         text: shareText,
         url: window.location.href
-      }).then( () => {
+      }).then(() => {
         console.log('Shared');
       }).catch(() => {
         console.log('error sharing');
       });
-    } else if (options.isAndroid || options.isIOS) {
+    } else {
       const shareURL = `whatsapp://send?text=${encodeURIComponent(shareText)}`;
-      location.href = shareURL;  
-    } else if (options.isChrome || options.isFirefox || options.isIE || options.isEdge || options.isChromiumBased || options.isSafari) {
-      const shareURL = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
       location.href = shareURL;
     }
   }
-  
 }
+
+
+// else if (options.isAndroid || options.isIOS) {
+//   const shareURL = `whatsapp://send?text=${encodeURIComponent(shareText)}`;
+//   location.href = shareURL;
+// } else if (options.isChrome || options.isFirefox || options.isIE || options.isEdge || options.isChromiumBased || options.isSafari) {
+//   const shareURL = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+//   location.href = shareURL;
+// }
