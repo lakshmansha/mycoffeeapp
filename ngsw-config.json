@@ -14,7 +14,8 @@
           "/*.js"
         ],
         "urls": [
-          "https://fonts.googleapis.com/icon?family=Material+Icons"
+          "https://fonts.googleapis.com/icon?family=Material+Icons",
+          "https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2"
         ]
       }
     }, {
@@ -26,6 +27,21 @@
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api",
+      "urls": [
+        "http://localhost:4202/coffees",
+        "http://192.168.29.217:4202/coffees"
+      ],
+      "cacheConfig": {
+        "maxAge": "3d12h",
+        "maxSize": 30,
+        "strategy": "freshness",
+        "timeout": "1000"
       }
     }
   ]
